@@ -50,12 +50,12 @@
   background-color: var(--main-color);
   color: #ffffff;
   box-shadow: var(--main-color) 0 0.6rem 3rem 0;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .start_btn:active {
   box-shadow: var(--main-color) 0 0.2rem 1.4rem 0;
-  transform: translateY(0.5rem) scale(1.1);
+  transform: translateY(0.5rem) scale(1.05);
   transition: 0.1s;
 }
 
