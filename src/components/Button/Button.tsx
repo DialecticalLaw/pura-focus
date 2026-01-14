@@ -12,7 +12,7 @@ export function Button({
   classes?: string[];
 }) {
   return (
-    <button className={`${classes && classes.join(' ')} ${styles.button}`} onClick={onClick}>
+    <button className={`${styles.button} ${classes && classes.join(' ')}`} onClick={onClick}>
       {children}
     </button>
   );

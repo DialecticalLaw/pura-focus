@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+:root {
+  --main-color: rgb(108, 44, 236);
+}
+
 html {
   font-size: 10px;
 }

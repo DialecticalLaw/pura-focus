@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.active {
+  background-color: var(--main-color);
+  outline-color: var(--main-color);
+  cursor: default;
+}
+
+.active:hover {
+  transform: none;
+}
