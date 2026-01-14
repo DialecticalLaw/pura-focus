@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Ysabeau_Infant } from 'next/font/google';
+import { Ubuntu_Mono } from 'next/font/google';
 import './globals.css';
 
-const mainFont = Ysabeau_Infant({
-  variable: '--main-font',
+const mainFont = Ubuntu_Mono({
   subsets: ['latin', 'cyrillic'],
+  weight: ['400', '700'],
+  variable: '--main-font',
 });
 
 export const metadata: Metadata = {

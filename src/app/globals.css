@@ -3,3 +3,22 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 10px;
+}
+
+p,
+a,
+span,
+button {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
