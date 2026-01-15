@@ -1,0 +1,9 @@
+.remove_btn {
+  width: 3rem;
+  height: 3rem;
+  transition: 0.3s;
+}
+
+.remove_btn:hover {
+  transform: scale(1.2);
+}

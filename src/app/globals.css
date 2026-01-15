@@ -5,7 +5,8 @@
 }
 
 :root {
-  --main-color: rgb(129, 66, 255);
+  --main-color: rgb(143, 87, 255);
+  --dark-transparent: rgba(0, 0, 0, 0.55);
 }
 
 html {
@@ -15,7 +16,8 @@ html {
 p,
 a,
 span,
-button {
+button,
+h1 {
   font-family: var(--main-font);
   font-size: 2rem;
   color: #ffffff;
