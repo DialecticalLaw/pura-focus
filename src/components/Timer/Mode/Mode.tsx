@@ -1,26 +1,34 @@
+'use client';
+
 import { Button } from '@/components/Button/Button';
 import styles from './Mode.module.css';
-import { useState } from 'react';
+import { ModeType, useTimerStore } from '@/stores/useTimerStore';
 
-type Mode = 'focus' | 'shortBreak' | 'longBreak';
-const modes: { short: Mode; long: string }[] = [
+const modesData: { short: ModeType; long: string }[] = [
   { short: 'focus', long: 'Focus' },
   { short: 'shortBreak', long: 'Short Break' },
   { short: 'longBreak', long: 'Long Break' },
 ];
 
 export function Mode() {
-  const [activeMode, setActiveMode] = useState<Mode>('focus');
+  const mode = useTimerStore((state) => state.mode);
+  const setMode = useTimerStore((state) => state.setMode);
+  const resetTime = useTimerStore((state) => state.resetTime);
+
+  const handleChangeMode = (mode: ModeType) => {
+    setMode(mode);
+    resetTime();
+  };
 
   return (
     <div className={styles.wrapper}>
-      {modes.map((mode) => (
+      {modesData.map((modeData) => (
         <Button
-          classes={[activeMode === mode.short ? styles.active : '']}
-          key={mode.short}
-          onClick={() => setActiveMode(mode.short)}
+          classes={[mode === modeData.short ? styles.active : '']}
+          key={modeData.short}
+          onClick={() => handleChangeMode(modeData.short)}
         >
-          {mode.long}
+          {modeData.long}
         </Button>
       ))}
     </div>
