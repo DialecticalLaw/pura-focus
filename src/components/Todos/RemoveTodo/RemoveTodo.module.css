@@ -1,4 +1,6 @@
 .remove_btn {
+  position: absolute;
+  right: 0;
   width: 3rem;
   height: 3rem;
   transition: 0.3s;

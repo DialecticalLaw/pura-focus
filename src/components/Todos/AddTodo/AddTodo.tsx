@@ -38,6 +38,7 @@ export function AddTodo() {
           className={styles.textarea}
           name="story"
           maxLength={120}
+          placeholder="Type Your todo here"
           rows={1}
           cols={40}
           onKeyDown={handleKeyDown}

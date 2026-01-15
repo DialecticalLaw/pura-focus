@@ -13,8 +13,8 @@ export function Todos() {
     <div className={styles.wrapper}>
       <AddTodo />
       <div className={styles.todos_list}>
-        {todos.map((todo) => (
-          <div className={styles.todo_wrapper} key={todo.id}>
+        {todos.map((todo, index, arr) => (
+          <div className={`${styles.todo_wrapper} ${index === arr.length - 1 ? styles.last_todo : ''}`} key={todo.id}>
             <p className={styles.todo_text}>{todo.text}</p>
             <RemoveTodo id={todo.id} />
           </div>
