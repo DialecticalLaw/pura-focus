@@ -2,8 +2,8 @@
   position: absolute;
   top: 1rem;
   left: 2rem;
-  width: 13rem;
-  height: 13rem;
+  width: 9rem;
+  height: 9rem;
   filter: drop-shadow(0 0 1.5rem rgba(0, 0, 0, 0.2));
   cursor: pointer;
 }
