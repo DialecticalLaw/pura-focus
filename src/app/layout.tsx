@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Ubuntu_Mono } from 'next/font/google';
 import './globals.css';
+import { Background } from '@/components/Background/Background';
+import { Navigation } from '@/components/Navigation/Navigation';
+import { Logo } from '@/components/Logo/Logo';
 
 const mainFont = Ubuntu_Mono({
   subsets: ['latin', 'cyrillic'],
@@ -21,7 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mainFont.variable}>{children}</body>
+      <body className={mainFont.variable}>
+        <Background>
+          <Logo />
+          {children}
+          <Navigation />
+        </Background>
+      </body>
     </html>
   );
 }
