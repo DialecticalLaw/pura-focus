@@ -18,7 +18,7 @@ export function AddTodo() {
 
     const text = textareaElem.value.trim();
     if (text) {
-      addTodo({ text, id: crypto.randomUUID() });
+      addTodo({ text, id: crypto.randomUUID(), isDone: false });
       textareaElem.value = '';
     }
   };
@@ -52,7 +52,7 @@ export function AddTodo() {
           if (!textareaElem) {
             throw new Error('textareaRef is null');
           }
-          addTodo({ text: textareaElem.value.trim() || '', id: crypto.randomUUID() });
+          addTodo({ text: textareaElem.value.trim() || '', id: crypto.randomUUID(), isDone: false });
           textareaElem.value = '';
         }}
       >
