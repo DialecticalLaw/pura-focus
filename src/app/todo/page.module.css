@@ -1,0 +1,16 @@
+.wrapper {
+  position: absolute;
+  top: 2%;
+  height: 88dvh;
+  width: 100%;
+  max-width: 110rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+}
+
+.title {
+  font-size: 6.5rem;
+}

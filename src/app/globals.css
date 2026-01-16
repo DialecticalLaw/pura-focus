@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: rgb(143, 87, 255);
+  --dark-transparent: rgba(0, 0, 0, 0.55);
+}
+
+html {
+  font-size: 10px;
+}
+
+p,
+a,
+span,
+button,
+h1 {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

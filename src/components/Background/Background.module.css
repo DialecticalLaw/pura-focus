@@ -1,0 +1,14 @@
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(92, 92, 92);
+  background-image: url('/camping.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

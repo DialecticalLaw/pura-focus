@@ -1,0 +1,9 @@
+.reset_btn {
+  width: 4.5rem;
+  height: 4.5rem;
+  transition: 0.3s;
+}
+
+.reset_btn:hover {
+  transform: scale(1.2);
+}
