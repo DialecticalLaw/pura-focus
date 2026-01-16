@@ -3,6 +3,7 @@ import { create } from 'zustand';
 export interface Todo {
   id: string;
   text: string;
+  isDone: boolean;
 }
 
 interface TodosStore {
@@ -10,6 +11,7 @@ interface TodosStore {
   addTodo: (todo: Todo) => void;
   removeTodo: (id: string) => void;
   clearTodos: () => void;
+  toggleTodo: (id: string) => void;
 }
 
 export const useTodosStore = create<TodosStore>((set) => ({
@@ -20,4 +22,6 @@ export const useTodosStore = create<TodosStore>((set) => ({
   },
   removeTodo: (id: string) => set((state) => ({ todos: state.todos.filter((todo) => todo.id !== id) })),
   clearTodos: () => set({ todos: [] }),
+  toggleTodo: (id: string) =>
+    set((state) => ({ todos: state.todos.map((todo) => (todo.id === id ? { ...todo, isDone: !todo.isDone } : todo)) })),
 }));

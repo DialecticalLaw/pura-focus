@@ -51,6 +51,11 @@
   animation: text_appear 0.3s;
 }
 
+.todo_text_done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 .todo_wrapper::before {
   content: '';
   position: absolute;
